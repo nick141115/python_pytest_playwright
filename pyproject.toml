@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "r734_autotests"
+version = "1.100.12"
+description = "r734_autotests - test automation for architectural repository service."
+authors = [
+    "Maxim Gamov <Gamov.Maxim@example.ru>"
+]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pytest-metadata = "^3.0.0"
+pytest-playwright = "^0.4.3"
+pytest-timeout = "^2.3.1"
+pytest-rerunfailures = "^14.0"
+pytest-xdist = "^3.6.1"
+pytest = "^8.3.3"
+allure-pytest = "^2.13.5"
+playwright = "1.48.0"
+python-dateutil = "^2.9.0.post0"
+
+[tool.poetry.group.dev.dependencies]
+pep8-naming = "^0.13.3"
+flake8 = "^6.1.0"
+black = "^23.12.1"
+flake8-bugbear = "^23.9.16"
+flake8-docstrings = "^1.7.0"
+flake8-annotations = "^3.0.1"
+
+[[tool.poetry.source]]
+name = "artifactory"
+url = "https://artifactory.example.ru/artifactory/api/pypi/pypi/simple"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.mypy]
+ignore_missing_imports = true
